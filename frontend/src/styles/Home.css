@@ -1,0 +1,127 @@
+/* Conteneur principal */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ffefba, #ffffff);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Contenu principal */
+.home-content {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  animation: slideIn 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation d'entrée */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Décoration d'arrière-plan */
+.home-content::before,
+.home-content::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #ffd700;
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.home-content::before {
+  top: -30px;
+  left: -30px;
+}
+
+.home-content::after {
+  bottom: -30px;
+  right: -30px;
+}
+
+/* Titre principal */
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Slogan */
+.home-tagline {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: #555;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Fonctionnalités */
+.home-features {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-features p {
+  font-size: 1rem;
+  color: #666;
+  padding: 10px 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.home-features p:hover {
+  transform: translateY(-5px);
+  background: #ffd700;
+  color: #333;
+}
+
+/* Bouton principal */
+.home-button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffd700, #f0c600);
+  color: #2c3e50;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover {
+  background: linear-gradient(135deg, #f0c600, #e6b800);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.home-button:active {
+  transform: scale(1);
+}

@@ -1,0 +1,185 @@
+/* Conteneur principal */
+.admin-dashboard {
+    padding: 30px;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(to bottom, #f7f7f7, #ffffff);
+    min-height: 100vh;
+  }
+  
+  /* Titres principaux */
+  h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  h1 {
+    font-size: 2.6rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  table thead {
+    background: #2c3e50;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  
+  table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  
+  table tbody tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Boutons */
+  button {
+    margin: 5px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modale */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    animation: slideIn 0.5s ease;
+  }
+  
+  .modal-content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+  }
+  
+  .modal-content input,
+  .modal-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .modal-content input:focus,
+  .modal-content textarea:focus {
+    border-color: #bdc3c7;
+    outline: none;
+    box-shadow: 0 0 8px rgba(189, 195, 199, 0.3);
+  }
+  
+  /* Effet d'entrée pour la modale */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .modal-content {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  
